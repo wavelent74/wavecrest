@@ -1,0 +1,15 @@
+services:
+  - type: web_service
+    name: wavecrest-backend
+    env: node
+    plan: free
+    repo: https://github.com/wavelent74/wavecrest
+    branch: main
+    root: backend
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      # Add environment variables (secrets) in the Render dashboard, not here
+      # - key: DATABASE_URL
+      #   sync: false
